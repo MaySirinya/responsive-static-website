@@ -15,6 +15,9 @@
     background-size: cover;
     margin: 10px;
 }
+.header{
+    padding-left: 30px;
+}
 
 .footer {
     display: flex;
@@ -145,6 +148,9 @@ hr {
     align-items: center;
 
 }
+ #menu-toggle {
+        display: none;
+    }
 
 .navbar_social img {
     background-color: rgb(61, 61, 3);
@@ -203,7 +209,7 @@ hr {
     padding-bottom: 20px;
 }
 
-input {
+.inputemail {
     height: 50px;
     width: 400px;
     background-color: rgb(224, 224, 217);
@@ -231,7 +237,7 @@ input {
 
     text-align: justify;
 }
-.toggle {
+label {
     display: none;
 
     font-size: 1.5em;
@@ -243,24 +249,34 @@ input {
     justify-content: center;
     align-items: center;
 }
+#menu-toggle{
+    float: right;
+ 
+}
 
+
+   #menu-toggle:checked + .navbar {
+    display: block;
+   }
 @media only screen and (max-width:1050px) {
     .about img {
         height: 400px;
     }
+    .navbar {
+        display: none;
+       }
+   
 }
 
 @media only screen and (max-width:800px) {
-  
-    .toggle {
-        display: block;
-        float: right;
-        
-    }
+ 
     .banner {
         height:700px;
     
     }
+    .navbar {
+        display: none;
+       }
 
     .wrapper {
         grid-template-columns: repeat(1, 250px);
@@ -292,26 +308,27 @@ input {
         height: 200px;
     }
 
-    .navbar {
-        display: none;
-    }
+   
 
     .bg_img {
 
         height: 600px;
     }
 
-    input {
+   .inputemail {
 
         width: 300px;
 
     }
 }
-    @media only screen and (max-width:400px) {
+    @media only screen and (max-width:500px) {
     .about_img img{
         height: 200px;
   
     }
+    .navbar {
+        display: none;
+       }
     .about_img {
         height: 200px;
         
@@ -331,5 +348,24 @@ input {
     .navbar_social{
         padding-left: 0px;
     }
+    
+
+   .navbar_logo{
+        display: none;
+    } 
+   .navbar{
+        flex-flow: column; 
+        width: 50%;
+    
+    } 
+   label {
+        display: block;
+        float: right;
+        
+    }
+    .navbar_list{
+    padding-left: 100px;
+   } 
+
    
 }
