@@ -1,0 +1,335 @@
+:root{
+    --main-font-color:rgb(44, 44, 3);
+    --bg-color: rgb(240, 243, 242);
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bg_img {
+    height: 700px;
+    background-image: url(./pawel-czerwinski-1056851-unsplash.jpg);
+    background-size: cover;
+    margin: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+.bg_img img {
+    width: 100%;
+    height: 600px;
+}
+
+.navbar,
+.footer_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar li,
+.footer_navbar li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+
+}
+
+.footer_navbar {
+    width: 40%;
+}
+
+.navbar a,
+.footer_navbar a {
+    text-decoration: none;
+    color:var(--main-font-color);
+    text-transform: uppercase;
+    padding: 10px;
+    border: transparent solid 2px;
+}
+
+.navbar a:hover {
+    border: var(--main-font-color) solid 2px;
+}
+
+.navbar_logo {
+    margin: 10px;
+    font-size: 2em;
+}
+
+.banner {
+    height:600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    color:var(--main-font-color);
+    letter-spacing: 20px;
+}
+
+.header h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+}
+
+hr {
+    width: 10%;
+    background-color: var(--main-font-color);
+    border: none;
+    padding: 3px;
+}
+
+.lastest_article {
+    text-align: center;
+}
+
+.lastest_article_one {
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    margin: 30px;
+}
+
+.lastest_article_one img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lastest_article_one p {
+    padding: 20px;
+}
+
+.about {
+    display: flex;
+
+}
+
+.about img {
+    height: 500px;
+    background-size: cover;
+
+}
+
+.heading{
+    text-align: center;
+   padding:100px 0  0 0;
+}
+.more-space{
+    background-color: var(--bg-color);
+}
+.wrapper {
+   
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-gap: 60px;
+    padding: 50px 0 150px 0;
+    background-color: var(--bg-color);
+ 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar_social img {
+    background-color: rgb(61, 61, 3);
+    border-radius: 100px;
+    padding: 9px;
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+}
+
+.navbar_social{
+    padding-left: 60px;
+}
+
+.pic {
+
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desc_box_picture {
+    background-color: white;
+    box-shadow: -14px 13px 42px -17px rgba(0, 0, 0, 0.45);
+}
+
+.desc_para {
+    text-align: center;
+    padding: 10px;
+    height: 100px;
+}
+
+.subscribe {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-bottom: 60px;
+
+}
+
+.subscribe_detail {
+    color:var(--main-font-color);;
+    text-align: center;
+
+}
+
+.subscribe_detail h2 {
+    padding-bottom: 20px;
+}
+
+input {
+    height: 50px;
+    width: 400px;
+    background-color: rgb(224, 224, 217);
+    margin-top: 20px;
+    border: 2px white solid;
+    
+}
+
+.submit {
+    margin: 20px;
+    padding: 20px 100px;
+    text-transform: uppercase;
+    color: var(--main-font-color);
+    background-color: transparent;
+    border: 2px var(--main-font-color) solid;
+}
+
+.about_para {
+    text-align: center;
+    margin:40px;
+
+}
+
+.about_para p{
+
+    text-align: justify;
+}
+.toggle {
+    display: none;
+
+    font-size: 1.5em;
+}
+
+.horizontal-line {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:1050px) {
+    .about img {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+  
+    .toggle {
+        display: block;
+        float: right;
+        
+    }
+    .banner {
+        height:700px;
+    
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(1, 250px);
+
+    }
+
+    .about {
+        flex-flow: column;
+    }
+
+    .about_img {
+        height: 400px;
+        width: 100%;
+    }
+
+    .about_img img {
+        height: 400px;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .footer {
+        text-align: center;
+        flex-flow: column-reverse;
+        height: 200px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .bg_img {
+
+        height: 600px;
+    }
+
+    input {
+
+        width: 300px;
+
+    }
+}
+    @media only screen and (max-width:400px) {
+    .about_img img{
+        height: 200px;
+  
+    }
+    .about_img {
+        height: 200px;
+        
+    }
+    .navbar_social{
+        padding-bottom: 50px;
+    }
+    .pic {
+
+        width: 300px;
+        height: 300px;
+    }
+    .wrapper {
+        grid-template-columns: repeat(1, 300px);
+
+    }
+    .navbar_social{
+        padding-left: 0px;
+    }
+   
+}
